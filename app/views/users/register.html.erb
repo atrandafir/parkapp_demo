@@ -1,5 +1,8 @@
 <% @page_title = "Parkapp | Registro" %>
 
+<div id="iphone">
+  <div class="screen">
+
 <% if flash[:color]=="valid" %>
 <div class="valid_notice">
   <p><%= flash[:notice] %></p>
@@ -14,15 +17,16 @@
 					<h1>Registro</h1>
 					<%= form_for(:user, :url => users_processregistration_path) do |f| %>
 
-						<p> Username:</br> <%= f.text_field :username%> </p>
+						<p> Usuario:</br> <%= f.text_field :username%> </p>
 
 						<p> Email:</br> <%= f.text_field :email%> </p>
 
-						<p> Password:</br> <%= f.password_field :password%></p>
+						<p> Contraseña:</br> <%= f.password_field :password%></p>
 
-						<p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+						<p> Confirmar contraseña:</br> <%= f.password_field :password_confirmation%> </p>
 
-						<%= f.submit :Signup %>
+						<p><%= f.submit :'Registrarme' %></p>
+            <p><%= link_to 'Volver a inicio', root_path %></p>
 					<% end %>
 
 					<% if @user.errors.any? %>
@@ -32,4 +36,10 @@
 							<% end %>
 						</ul>
 					<% end %>
+</div>
+
+    </div>
+</div>
+<div id="introduction">
+  <%= render 'site/introduction' %>
 </div>

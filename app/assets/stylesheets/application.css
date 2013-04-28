@@ -11,3 +11,63 @@
  *= require_self
  *= require_tree .
  */
+
+/* main wrapper
+----------------*/
+#wrap {
+  width:800px;
+  margin: 30px auto;
+}
+
+/* iphone background
+-----------------------*/
+#iphone {
+  width: 361px;
+  height: 707px;
+  background: url('iphone.png') top right no-repeat;
+  float: left;
+}
+#iphone .screen {
+  background: #eeeeee;
+  margin: 134px 0 0 20px;
+  padding: 20px;
+  width: 280px;
+  height: 420px;
+  overflow: auto;
+}
+
+/* logo
+----------*/
+.logo {
+  margin-bottom: 30px;
+}
+.logo img {
+  float: left;
+  margin-right: 20px;
+}
+.logo .text p {
+  font-style: italic;
+}
+
+/* introduction text
+-----------------------*/
+#introduction {
+  width: 419px;
+  float: right;
+}
+
+/* clear floats
+------------------*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */

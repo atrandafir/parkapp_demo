@@ -1,10 +1,17 @@
 ParkappDemo::Application.routes.draw do
-  
+
+  resources :parking_types
+
+
   match '/users/register', :controller => 'users', :action => 'register'
   match '/users/processregistration', :controller => 'users', :action => 'processregistration'
+  match '/login', :controller => 'sessions', :action => 'login'
+  match '/login_attempt', :controller => 'sessions', :action => 'login_attempt'
+  match '/logout', :controller => 'sessions', :action => 'logout'
+  match '/checkout', :controller => 'site', :action => 'checkout'
+  match '/search', :controller => 'site', :action => 'search'
   
   resources :users
-
 
   get "site/index"
 

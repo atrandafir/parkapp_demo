@@ -1,4 +1,32 @@
-<h1>Bienvenido a ParkApp</h1>
-<p><em>¡Se han acabado los problemas de aparcamiento!</em></p>
+<div id="iphone">
+  <div class="screen">
 
-<p><%= link_to 'Registro', users_register_path %></p>
+    <div class="logo clearfix">
+      <%=image_tag("car.png",:size => "100x82", :alt=> "Car logo")%>
+      <div class="text">
+        <h2>ParkApp</h2>
+        <p>¡No más problemas de aparcamiento!</p>
+      </div>
+    </div>
+
+    <%unless session[:user_id]%>
+    <p><%= link_to 'Iniciar sesión', login_path %></p>
+    <p><%= link_to 'Registro', users_register_path %></p>
+    <%else%>
+    <p>¡Hola <%=@current_user.username%>!</p>
+    <p>¿Qué estás haciendo?</p>
+    <ul>
+      <li>
+        <%= link_to 'Estoy saliendo', checkout_path %>
+      </li>
+      <li>
+        <%= link_to 'Estoy buscando plaza', search_path %>
+      </li>
+    </ul>
+    <p><%= link_to 'Cerrar sesión', logout_path %></p>
+    <%end%>
+  </div>
+</div>
+<div id="introduction">
+  <%= render 'introduction' %>
+</div>

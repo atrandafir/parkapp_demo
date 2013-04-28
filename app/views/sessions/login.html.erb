@@ -1,0 +1,38 @@
+<% @page_title = "Parkapp | Login" -%>
+
+<div id="iphone">
+  <div class="screen">
+    
+    <% if flash[:color]== "valid" %>
+		<div class="valid_notice">
+			<p><%= flash[:notice]%></p>
+		</div>
+	<% elsif flash[:color]== "invalid"%>
+		<div class="invalid_notice">
+			<p><%=flash[:notice]%></p>
+		</div>
+	<%else%>
+		<div class="notice">
+			<p><%=flash[:notice]%></p>
+		</div>
+	<%end%>
+    
+<div class= "Sign_Form">
+	<h1>Iniciar sesión</h1>
+	<%= form_tag(:action => 'login_attempt') do %>
+		<p>Usuario o Email:</br> <%= text_field_tag(:username_or_email) %></p> 
+		<p>Contraseña:</br> <%= password_field_tag :login_password %></p> 
+		<p><%= submit_tag("Entrar") %></p>
+    
+    <p><%= link_to 'Volver a inicio', root_path %></p>
+    
+	<% end %>
+</div>
+
+
+  
+    </div>
+</div>
+<div id="introduction">
+  <%= render 'site/introduction' %>
+</div>

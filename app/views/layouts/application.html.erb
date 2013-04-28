@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="wrap">
+    
+    
+    <div class="clearfix">
+    <%= yield %>
+    </div>
+    
+    <%if session[:user_id] and @current_user.is_admin%>
+      <p>Administración: <%= link_to 'Usuarios', users_path %> <%= link_to 'Tipos de Plaza', parking_types_path %></p>
+    <%end%>
+    
+  </div>
 </body>
 </html>

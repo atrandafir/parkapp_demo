@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  
+  before_filter :authenticate_user, :except => [:register, :processregistration]
+  before_filter :save_login_state, :only => [:register, :processregistration]
+  
   # GET /users
   # GET /users.json
   def index
@@ -39,16 +43,16 @@ class UsersController < ApplicationController
   end
   
   def processregistration
-					@user = User.new(params[:user])
-						if @user.save
-						flash[:notice] = "You Signed up successfully"
-						flash[:color]= "valid"
-					else
-						flash[:notice] = "Form is invalid"
-						flash[:color]= "invalid"
-					end
-					render "register"
-				end
+    @user = User.new(params[:user])
+    if @user.save
+      flash[:notice] = "Te has registrado correctamente"
+      flash[:color]= "valid"
+    else
+      flash[:notice] = "Por favor corrige los errores del formulario"
+      flash[:color]= "invalid"
+    end
+    render "register"
+  end
   
   # GET /users/1/edit
   def edit
