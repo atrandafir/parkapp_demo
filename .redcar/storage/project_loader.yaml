@@ -1,0 +1,4 @@
+--- 
+open_files: 
+  - app/models/user.rb
+  - app/views/users/register.html.erb

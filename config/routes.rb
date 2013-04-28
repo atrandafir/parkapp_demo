@@ -1,4 +1,11 @@
 ParkappDemo::Application.routes.draw do
+  
+  match '/users/register', :controller => 'users', :action => 'register'
+  match '/users/processregistration', :controller => 'users', :action => 'processregistration'
+  
+  resources :users
+
+
   get "site/index"
 
   # The priority is based upon order of creation:

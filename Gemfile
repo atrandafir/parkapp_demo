@@ -6,6 +6,9 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'validates_email_format_of'
+gem 'bcrypt-ruby', :require => 'bcrypt'
+# gem "mysql2"
 
 
 # Gems used only for assets and not required

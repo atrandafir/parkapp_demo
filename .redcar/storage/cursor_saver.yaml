@@ -1,0 +1,53 @@
+--- 
+cursor_positions: 
+  - :path: config/database.yml
+    :cursor_offset: 212
+    :timestamp: 2013-04-25 23:42:14 +02:00
+  - :path: db/seeds.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-24 23:39:04 +02:00
+  - :path: db/migrate/20130425214926_create_users.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-25 23:49:26 +02:00
+  - :path: Gemfile
+    :cursor_offset: 187
+    :timestamp: 2013-04-26 00:03:59 +02:00
+  - :path: app/controllers/site_controller.rb
+    :cursor_offset: 56
+    :timestamp: 2013-04-25 23:53:46 +02:00
+  - :path: db/schema.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-25 23:51:28 +02:00
+  - :path: app/views/users/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-04-25 23:49:27 +02:00
+  - :path: db/migrate/20130425222915_add_more_to_users.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-26 00:29:15 +02:00
+  - :path: app/views/users/index.html.erb
+    :cursor_offset: 582
+    :timestamp: 2013-04-25 23:49:27 +02:00
+    :selection_offset: 622
+    :block_selection_mode: false
+  - :path: app/views/users/new.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-04-25 23:49:27 +02:00
+  - :path: app/views/site/index.html.erb
+    :cursor_offset: 140
+    :timestamp: 2013-04-26 01:16:17 +02:00
+  - :path: app/helpers/users_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-25 23:49:27 +02:00
+  - :path: config/routes.rb
+    :cursor_offset: 209
+    :timestamp: 2013-04-26 01:18:31 +02:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 1003
+    :timestamp: 2013-04-26 00:45:10 +02:00
+  - :path: app/models/user.rb
+    :cursor_offset: 47
+    :timestamp: 2013-04-26 01:43:51 +02:00
+  - :path: app/views/users/register.html.erb
+    :cursor_offset: 190
+    :timestamp: 2013-04-26 01:38:29 +02:00
+files_to_retain: 0
