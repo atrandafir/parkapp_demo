@@ -1,5 +1,32 @@
 <div id="iphone">
-  checkout
+  <div class="screen">
+    <h2>Dejando una plaza libre</h2>
+    
+    <% if @parking_lot.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @parking_lot.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+
+    <%= form_for(:parking_lot, :url => processcheckout_path) do |f| %>
+    
+    <p>Por favor ajusta en el mapa la posición de tu coche:</p>
+    <p>
+      Selecciona el tipo de plaza:<br />
+      <%= f.number_field :parking_type_id %>
+    </p>
+
+    <p><%= f.submit :'¡Enviar plaza!' %></p>
+    <p><%= link_to 'Volver a inicio', root_path %></p>
+    <% end %>
+
+
+  </div>
 </div>
 <div id="introduction">
   <%= render 'introduction' %>

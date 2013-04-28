@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428174809) do
+ActiveRecord::Schema.define(:version => 20130428194307) do
+
+  create_table "parking_lots", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "parking_type_id"
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+    t.decimal  "latitude",        :precision => 10, :scale => 6
+    t.decimal  "longitude",       :precision => 10, :scale => 6
+  end
 
   create_table "parking_types", :force => true do |t|
     t.string   "name"

@@ -6,9 +6,6 @@ cursor_positions:
   - :path: db/seeds.rb
     :cursor_offset: 0
     :timestamp: 2013-04-24 23:39:04 +02:00
-  - :path: db/migrate/20130425214926_create_users.rb
-    :cursor_offset: 0
-    :timestamp: 2013-04-25 23:49:26 +02:00
   - :path: Gemfile
     :cursor_offset: 187
     :timestamp: 2013-04-26 00:03:59 +02:00
@@ -63,20 +60,12 @@ cursor_positions:
   - :path: config/routes.rb
     :cursor_offset: 574
     :timestamp: 2013-04-28 19:58:21 +02:00
-  - :path: app/controllers/site_controller.rb
-    :cursor_offset: 47
-    :timestamp: 2013-04-28 19:57:00 +02:00
-    :selection_offset: 71
-    :block_selection_mode: false
   - :path: app/views/users/edit.html.erb
     :cursor_offset: 110
     :timestamp: 2013-04-25 23:49:27 +02:00
   - :path: app/views/site/search.html.erb
     :cursor_offset: 26
     :timestamp: 2013-04-28 20:10:42 +02:00
-  - :path: app/views/site/checkout.html.erb
-    :cursor_offset: 28
-    :timestamp: 2013-04-28 20:10:34 +02:00
   - :path: app/views/users/index.html.erb
     :cursor_offset: 623
     :timestamp: 2013-04-28 19:54:32 +02:00
@@ -91,17 +80,9 @@ cursor_positions:
   - :path: app/controllers/sessions_controller.rb
     :cursor_offset: 639
     :timestamp: 2013-04-28 20:48:25 +02:00
-  - :path: app/views/users/register.html.erb
-    :cursor_offset: 796
-    :timestamp: 2013-04-28 20:45:59 +02:00
-    :selection_offset: 746
-    :block_selection_mode: false
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 224
     :timestamp: 2013-04-28 20:51:20 +02:00
-  - :path: app/views/site/index.html.erb
-    :cursor_offset: 468
-    :timestamp: 2013-04-28 20:49:54 +02:00
   - :path: app/controllers/parking_types_controller.rb
     :cursor_offset: 90
     :timestamp: 2013-04-28 20:52:05 +02:00
@@ -114,4 +95,41 @@ cursor_positions:
   - :path: app/models/user.rb
     :cursor_offset: 1186
     :timestamp: 2013-04-28 21:02:30 +02:00
+  - :path: db/migrate/20130425214926_create_users.rb
+    :cursor_offset: 163
+    :timestamp: 2013-04-25 23:49:26 +02:00
+    :selection_offset: 141
+    :block_selection_mode: false
+  - :path: db/migrate/20130428174809_create_parking_types.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-28 19:48:09 +02:00
+  - :path: app/views/users/register.html.erb
+    :cursor_offset: 600
+    :timestamp: 2013-04-28 20:45:59 +02:00
+  - :path: app/models/ParkingLot.rb
+    :cursor_offset: 105
+    :timestamp: 2013-04-28 21:38:47 +02:00
+  - :path: db/migrate/20130428192545_parking_lot.rb
+    :cursor_offset: 402
+    :timestamp: 2013-04-28 21:35:14 +02:00
+  - :path: app/views/site/checkout.html.erb
+    :cursor_offset: 61
+    :timestamp: 2013-04-28 21:10:57 +02:00
+  - :path: app/views/site/index.html.erb
+    :cursor_offset: 20
+    :timestamp: 2013-04-28 20:49:54 +02:00
+    :selection_offset: 40
+    :block_selection_mode: false
+  - :path: db/migrate/20130428194307_parking_lot_rename.rb
+    :cursor_offset: 102
+    :timestamp: 2013-04-28 21:43:36 +02:00
+  - :path: app/models/parking_type.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-28 19:48:09 +02:00
+  - :path: app/models/parking_lot.rb
+    :cursor_offset: 0
+    :timestamp: 2013-04-28 21:38:47 +02:00
+  - :path: app/controllers/site_controller.rb
+    :cursor_offset: 190
+    :timestamp: 2013-04-28 21:40:48 +02:00
 files_to_retain: 0

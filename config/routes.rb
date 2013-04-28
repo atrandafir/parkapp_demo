@@ -9,6 +9,7 @@ ParkappDemo::Application.routes.draw do
   match '/login_attempt', :controller => 'sessions', :action => 'login_attempt'
   match '/logout', :controller => 'sessions', :action => 'logout'
   match '/checkout', :controller => 'site', :action => 'checkout'
+  match '/processcheckout', :controller => 'site', :action => 'processcheckout'
   match '/search', :controller => 'site', :action => 'search'
   
   resources :users
