@@ -2,6 +2,17 @@
   <div class="screen">
     <h2>Dejando una plaza libre</h2>
     
+              <% if flash[:color]=="valid" %>
+<div class="valid_notice">
+  <p><%= flash[:notice] %></p>
+</div>
+<% elsif flash[:color]=="invalid" %>
+<div class="invalid_notice">
+  <p><%= flash[:notice] %></p>
+</div>
+<% end%>
+<%flash[:notice]=nil%>
+    
     <% if @parking_lot.errors.any? %>
     <div id="error_explanation">
       <ul>
@@ -15,13 +26,28 @@
 
     <%= form_for(:parking_lot, :url => processcheckout_path) do |f| %>
     
-    <p>Por favor ajusta en el mapa la posición de tu coche:</p>
+    <% content_for :head do %><%= (render 'checkout_javascript') %><% end %>
+    
+    <p>Arrastra y ajusta la posición de tu coche:</p>
+    <div id="checkout-map-canvas"></div>
+    
     <p>
-      Selecciona el tipo de plaza:<br />
-      <%= f.number_field :parking_type_id %>
+      Selecciona el tipo de plaza:
+      <%@parking_types = ParkingType.find(:all, :order => "position ASC")%>
+      <% @parking_types.each do |parking_type| %>
+      <div style="margin-top:10px; color:<%=parking_type.color%>; background:<%=parking_type.background%>;">
+      <%= f.radio_button :parking_type_id, parking_type.id %>
+      <%= label_tag "parking_lot_parking_type_id_#{parking_type.id}", parking_type.name %>
+      </div>
+      <% end %>
     </p>
 
-    <p><%= f.submit :'¡Enviar plaza!' %></p>
+    <p>
+      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :latitude %>
+      <%= f.hidden_field :longitude %>
+      <%= f.submit :'¡Enviar plaza!', :class=>'button' %>
+    </p>
     <p><%= link_to 'Volver a inicio', root_path %></p>
     <% end %>
 

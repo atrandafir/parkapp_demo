@@ -45,13 +45,17 @@ class UsersController < ApplicationController
   def processregistration
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "Te has registrado correctamente"
+      flash[:notice] = "Te has registrado correctamente, ahora ya puedes acceder"
       flash[:color]= "valid"
+      redirect_to(root_path)
+      return
     else
       flash[:notice] = "Por favor corrige los errores del formulario"
       flash[:color]= "invalid"
+      render "register"
+      return
     end
-    render "register"
+    
   end
   
   # GET /users/1/edit

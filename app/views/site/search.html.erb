@@ -1,5 +1,29 @@
 <div id="iphone">
-  search
+  
+<% content_for :head do %><%= (render 'search_javascript') %><% end %>
+  
+<div class="screen">
+  
+  <div id="search_container">
+  <h2>Buscar plaza libre</h2>
+  <div id="map-canvas"></div>
+    <p><a href="#" class="button" onclick="$('#search_container').hide();$(this).hide();$('#confirmation_container').show(); return false;">¡Ya he aparcado!</a></p>
+
+  </div>
+  
+  <div id="confirmation_container" style="display:none">
+    <h2>¡Qué bien!</h2>
+    <p>Nos alegramos que hayas parado de dar vueltas y has encontrado parking :-) </p>
+    <p>Recuerda que para que esto funcione bien, necesitamos la colaboración de más usuarios, así que por favor compartelo:</p>
+    <p>
+      <a href="#" onclick="return false;" class="button">Compartir en Facebook</a>
+      <a href="#" onclick="return false;" class="button">Compartir en Twitter</a>
+    </p>
+  </div>
+  
+  <p><%= link_to 'Volver a inicio', root_path %></p>
+</div>
+  
 </div>
 <div id="introduction">
   <%= render 'introduction' %>

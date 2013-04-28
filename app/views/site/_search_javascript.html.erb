@@ -1,0 +1,45 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+  var map;
+  function initialize() {
+    var mapOptions = {
+      zoom: 15,
+      center: new google.maps.LatLng(41.3952305, 2.1935201000000006),
+      disableDefaultUI: true,
+      zoomControl: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+    mapOptions);
+    
+    var locations = [];
+    <%@parking_lots = ParkingLot.find(:all)%>
+    <% @parking_lots.each_with_index do |parking_lot, index| %>
+    locations[locations.length]=['<%=parking_lot.parking_type.name%>', <%=parking_lot.latitude%>, <%=parking_lot.longitude%>, <%=index%>];
+    <% end %>
+    
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  
+  
+
+</script>

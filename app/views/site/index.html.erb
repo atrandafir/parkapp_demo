@@ -8,21 +8,29 @@
         <p>¡No más problemas de aparcamiento!</p>
       </div>
     </div>
+    
+    <% if flash[:color]=="valid" %>
+    <div class="valid_notice">
+      <p><%= flash[:notice] %></p>
+    </div>
+    <% elsif flash[:color]=="invalid" %>
+    <div class="invalid_notice">
+      <p><%= flash[:notice] %></p>
+    </div>
+    <% end%>
 
     <%unless session[:user_id]%>
-    <p><%= link_to 'Iniciar sesión', login_path %></p>
-    <p><%= link_to 'Registro', users_register_path %></p>
+    <p>
+    <%= link_to 'Iniciar sesión', login_path, {:class=>'button'} %>
+    <%= link_to 'Registro', users_register_path, {:class=>'button'} %>
+    </p>
     <%else%>
     <p>¡Hola <%=@current_user.username%>!</p>
     <p>¿Qué estás haciendo?</p>
-    <ul>
-      <li>
-        <%= link_to 'Estoy saliendo', checkout_path %>
-      </li>
-      <li>
-        <%= link_to 'Estoy buscando plaza', search_path %>
-      </li>
-    </ul>
+    <p>
+      <%= link_to 'Estoy saliendo', checkout_path, {:class=>'button'} %>
+      <%= link_to 'Estoy buscando plaza', search_path , {:class=>'button'}%>
+    </p>
     <p><%= link_to 'Cerrar sesión', logout_path %></p>
     <%end%>
   </div>

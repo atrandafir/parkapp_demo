@@ -3,7 +3,10 @@
 <div id="iphone">
   <div class="screen">
     
-    <% if flash[:color]== "valid" %>
+    
+<div class= "Sign_Form">
+	<h1>Iniciar sesión</h1>
+  <% if flash[:color]== "valid" %>
 		<div class="valid_notice">
 			<p><%= flash[:notice]%></p>
 		</div>
@@ -16,13 +19,12 @@
 			<p><%=flash[:notice]%></p>
 		</div>
 	<%end%>
-    
-<div class= "Sign_Form">
-	<h1>Iniciar sesión</h1>
+  <%flash[:notice]=nil%>
+  
 	<%= form_tag(:action => 'login_attempt') do %>
 		<p>Usuario o Email:</br> <%= text_field_tag(:username_or_email) %></p> 
 		<p>Contraseña:</br> <%= password_field_tag :login_password %></p> 
-		<p><%= submit_tag("Entrar") %></p>
+		<p><%= submit_tag("Entrar", :class=>'button') %></p>
     
     <p><%= link_to 'Volver a inicio', root_path %></p>
     

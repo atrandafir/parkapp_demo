@@ -1,4 +1,4 @@
-1367178874
+1367190936
 AddMoreToUsers	/Users/alex/NetBeansProjects/parkapp_demo/db/migrate/20130425222915_add_more_to_users.rb	class AddMoreToUsers 
 Application	/Users/alex/NetBeansProjects/parkapp_demo/config/application.rb	  class Application 
 ApplicationController	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/application_controller.rb	class ApplicationController 
@@ -39,16 +39,16 @@ change	/Users/alex/NetBeansProjects/parkapp_demo/db/migrate/20130425222915_add_m
 change	/Users/alex/NetBeansProjects/parkapp_demo/db/migrate/20130428174809_create_parking_types.rb	  def change
 change	/Users/alex/NetBeansProjects/parkapp_demo/db/migrate/20130428192545_parking_lot.rb	  def change
 checkout	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/site_controller.rb	  def checkout
-create	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def create
 create	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def create
-destroy	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def destroy
+create	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def create
 destroy	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def destroy
+destroy	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def destroy
 down	/Users/alex/NetBeansProjects/parkapp_demo/db/migrate/20130428194307_parking_lot_rename.rb	  def down
-edit	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def edit
 edit	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def edit
+edit	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def edit
 encrypt_password	/Users/alex/NetBeansProjects/parkapp_demo/app/models/user.rb	  def encrypt_password
-index	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def index
 index	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def index
+index	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def index
 index	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/site_controller.rb	  def index
 is_admin	/Users/alex/NetBeansProjects/parkapp_demo/app/models/user.rb	  def is_admin
 load_user	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/application_controller.rb	  def load_user
@@ -56,16 +56,16 @@ login	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/sessions_control
 login_attempt	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/sessions_controller.rb	  def login_attempt
 logout	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/sessions_controller.rb	  def logout
 match_password	/Users/alex/NetBeansProjects/parkapp_demo/app/models/user.rb	  def match_password(login_password="")
-new	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def new
 new	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def new
+new	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def new
 processcheckout	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/site_controller.rb	  def processcheckout
 processregistration	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def processregistration
 register	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def register
 save_login_state	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/application_controller.rb	  def save_login_state
 search	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/site_controller.rb	  def search
-show	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def show
 show	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def show
+show	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def show
 test_homepage	/Users/alex/NetBeansProjects/parkapp_demo/test/performance/browsing_test.rb	  def test_homepage
 up	/Users/alex/NetBeansProjects/parkapp_demo/db/migrate/20130428194307_parking_lot_rename.rb	  def up
-update	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def update
 update	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/parking_types_controller.rb	  def update
+update	/Users/alex/NetBeansProjects/parkapp_demo/app/controllers/users_controller.rb	  def update
